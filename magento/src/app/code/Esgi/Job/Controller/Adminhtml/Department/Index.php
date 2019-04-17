@@ -7,9 +7,11 @@ use Magento\Backend\Model\View\Result\Page;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action;
 
+
 class Index extends Action
 {
     const ADMIN_RESOURCE = 'Esgi_Job::department';
+
     /**
      * @var PageFactory
      */
@@ -19,10 +21,7 @@ class Index extends Action
      * @param Context $context
      * @param PageFactory $resultPageFactory
      */
-    public function __construct(
-        Context $context,
-        PageFactory $resultPageFactory
-    )
+    public function __construct(Context $context, PageFactory $resultPageFactory)
     {
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
@@ -37,7 +36,7 @@ class Index extends Action
     {
         /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu(self::ADMIN_RESOURCE);
+        $resultPage->setActiveMenu('Esgi_Job::department');
         $resultPage->addBreadcrumb(__('Jobs'), __('Departments'));
         $resultPage->addBreadcrumb(__('Manage Departments'), __('Manage Departments'));
         $resultPage->getConfig()->getTitle()->prepend(__('Department'));

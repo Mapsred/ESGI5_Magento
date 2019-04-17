@@ -6,15 +6,9 @@ namespace Esgi\Job\Model;
 
 use Esgi\Job\Api\Data\DepartmentInterface;
 use Magento\Framework\Model\AbstractModel;
-use Magento\Framework\Model\{};
 use Magento\Framework\DataObject\IdentityInterface;
 use Esgi\Job\Model\ResourceModel\Department as DepartmentResourceModel;
 
-/**
- * Class Department
- * @author François MATHIEU <francois.mathieu@livexp.fr>
- * @method setUpdateTime($_)
- */
 class Department extends AbstractModel implements DepartmentInterface, IdentityInterface
 {
     /**
@@ -61,7 +55,7 @@ class Department extends AbstractModel implements DepartmentInterface, IdentityI
      *
      * @return array
      */
-    public function getIdentities(): array
+    public function getIdentities()
     {
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
@@ -81,7 +75,7 @@ class Department extends AbstractModel implements DepartmentInterface, IdentityI
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->getData(self::TITLE);
     }
@@ -91,7 +85,7 @@ class Department extends AbstractModel implements DepartmentInterface, IdentityI
      *
      * @return string
      */
-    public function getContent(): string
+    public function getContent()
     {
         return $this->getData(self::CONTENT);
     }
@@ -113,7 +107,7 @@ class Department extends AbstractModel implements DepartmentInterface, IdentityI
      * @param string $title
      * @return DepartmentInterface
      */
-    public function setTitle(string $title): DepartmentInterface
+    public function setTitle($title)
     {
         return $this->setData(self::TITLE, $title);
     }
@@ -124,22 +118,8 @@ class Department extends AbstractModel implements DepartmentInterface, IdentityI
      * @param string $content
      * @return DepartmentInterface
      */
-    public function setContent(string $content): DepartmentInterface
+    public function setContent($content)
     {
         return $this->setData(self::CONTENT, $content);
-    }
-
-    /**
-     * Description beforeSave function
-     *
-     * @return AbstractModel
-     */
-    public function beforeSave(): AbstractModel
-    {
-        if ($this->hasDataChanges()) {
-            $this->setUpdateTime(null);
-        }
-
-        return parent::beforeSave();
     }
 }

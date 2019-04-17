@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Esgi\Job\Model\ResourceModel\Department;
 
-use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-use Esgi\Job\Model\Department;
-use Esgi\Job\Model\ResourceModel\Department as DepartmentResourceModel;
+use \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
 class Collection extends AbstractCollection
 {
@@ -20,14 +18,7 @@ class Collection extends AbstractCollection
      */
     protected function _construct()
     {
-        $this->_init(Department::class, DepartmentResourceModel::class);
+        $this->_init('Esgi\Job\Model\Department', 'Esgi\Job\Model\ResourceModel\Department');
     }
 
-    /**
-     * @return array
-     */
-    public function toOptionArray()
-    {
-        return $this->_toOptionArray($this->_idFieldName, 'title');
-    }
 }

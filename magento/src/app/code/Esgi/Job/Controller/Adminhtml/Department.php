@@ -2,12 +2,7 @@
 
 namespace Esgi\Job\Controller\Adminhtml;
 
-use Magento\Backend\App\Action;
-use Magento\Backend\App\Action\Context;
-use Magento\Backend\Model\View\Result\Page;
-use Magento\Framework\Registry;
-
-abstract class Department extends Action
+abstract class Department extends \Magento\Backend\App\Action
 {
     /**
      * Authorization level of a basic admin session
@@ -15,20 +10,21 @@ abstract class Department extends Action
      * @see _isAllowed()
      */
     const ADMIN_RESOURCE = 'Esgi_Job::department';
-
     /**
      * Core registry
      *
-     * @var Registry
+     * @var \Magento\Framework\Registry
      */
     protected $_coreRegistry;
 
     /**
-     * @param Context $context
-     * @param Registry $coreRegistry
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\Registry         $coreRegistry
      */
-    public function __construct(Context $context, Registry $coreRegistry)
-    {
+    public function __construct(
+        \Magento\Backend\App\Action\Context $context,
+        \Magento\Framework\Registry $coreRegistry
+    ) {
         parent::__construct($context);
 
         $this->_coreRegistry = $coreRegistry;
@@ -37,16 +33,16 @@ abstract class Department extends Action
     /**
      * Init page
      *
-     * @param Page $resultPage
+     * @param \Magento\Backend\Model\View\Result\Page $resultPage
      *
-     * @return Page
+     * @return \Magento\Backend\Model\View\Result\Page
      */
     protected function initPage($resultPage)
     {
-        $resultPage
-            ->setActiveMenu('Esgi_Job::department')
-            ->addBreadcrumb(__('Job'), __('Department'))
-            ->addBreadcrumb(__('Departments'), __('Departments'));
+        $resultPage->setActiveMenu('Esgi_Job::department')->addBreadcrumb(__('Job'), __('Department'))->addBreadcrumb(
+            __('Departments'),
+            __('Departments')
+        );
 
         return $resultPage;
     }

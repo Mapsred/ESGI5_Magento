@@ -94,3 +94,6 @@ bash-cache-storage:
 
 bash-cache-proxy:
 	sh ./magento/docker/bin/connector.sh cache-proxy
+
+start:
+	sudo systemctl stop nginx && docker-compose up -d
