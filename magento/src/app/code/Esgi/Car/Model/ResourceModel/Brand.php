@@ -16,6 +16,6 @@ class Brand extends AbstractDb
     protected function _construct()
     {
         // Table Name and Primary Key column
-        $this->_init('esgi_car', 'entity_id');
+        $this->_init('esgi_car_brand', 'entity_id');
     }
 }
