@@ -1,0 +1,9 @@
+<?php
+/** @var $block Esgi\Car\Block\Brand\Index */
+$brands = $block->getBrands();
+?>
+<ul id="brand-list">
+    <?php foreach ($brands as $brand) : ?>
+        <li><a href="/car/brand/show/id/<?= $brand->getId()?>"><?php echo $brand->getTitle(); ?></a></li>
+    <?php endforeach; ?>
+</ul>

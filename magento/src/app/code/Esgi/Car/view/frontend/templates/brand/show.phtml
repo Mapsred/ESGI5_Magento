@@ -1,0 +1,19 @@
+<?php
+use Esgi\Car\Block\Brand\Show;
+use Esgi\Car\Model\Brand;
+
+/** @var $block Show */
+/** @var $brand Brand */
+
+$brand = $block->getBrand();
+$brandProducts = $block->getProductsByBrand($brand);
+
+ ?>
+<h1><?= $brand->getTitle() ?></h1>
+Content : <?= $brand->getContent() ?><br>
+Products :<br>
+
+<?php foreach ($brandProducts as $product) : ?>
+    <h2><a href="<?= $product->getProductUrl()?>"><?php echo $product->getName(); ?></a></h2>
+    <img src="<?= $product->getThumbsNail()?>"/>
+<?php endforeach; ?>
