@@ -47,7 +47,7 @@
     <virtualType name="Esgi\Car\Model\ResourceModel\Grid\Brand\Collection"
                  type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
-            <argument name="mainTable" xsi:type="string">esgi_car</argument>
+            <argument name="mainTable" xsi:type="string">esgi_car_brand</argument>
             <argument name="resourceModel" xsi:type="string">Esgi\Car\Model\ResourceModel\Brand</argument>
         </arguments>
     </virtualType>

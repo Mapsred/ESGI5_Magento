@@ -17,7 +17,7 @@
                 <item name="name" xsi:type="string">add</item>
                 <item name="label" xsi:type="string" translate="true">Add New Brand</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/new</item> <!-- magento will translate it by brand/brand/new -->
+                <item name="url" xsi:type="string">*/*/new</item> <!-- magento will translate it by car/brand/new -->
             </item>
         </item>
     </argument>

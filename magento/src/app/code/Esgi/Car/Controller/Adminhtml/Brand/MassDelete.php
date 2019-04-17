@@ -19,7 +19,7 @@ class MassDelete extends Action
      *
      * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Esgi_Job::brand';
+    const ADMIN_RESOURCE = 'Esgi_Car::brand';
 
     /**
      * @var Filter

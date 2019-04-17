@@ -10,7 +10,7 @@ use Magento\Backend\App\Action;
 
 class Index extends Action
 {
-    const ADMIN_RESOURCE = 'Esgi_Job::brand';
+    const ADMIN_RESOURCE = 'Esgi_Car::brand';
 
     /**
      * @var PageFactory
