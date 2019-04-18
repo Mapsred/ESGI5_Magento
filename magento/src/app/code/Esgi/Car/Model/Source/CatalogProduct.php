@@ -2,6 +2,7 @@
 namespace Esgi\Car\Model\Source;
 
 
+use Magento\Catalog\Model\Product;
 use \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Framework\Data\OptionSourceInterface;
 
@@ -40,9 +41,11 @@ class CatalogProduct implements OptionSourceInterface
     public function toOptionArray()
     {
         $options[] = ['label' => '', 'value' => ''];
+        /** @var Product[] $catalogProductCollection */
         $catalogProductCollection = $this->catalogProductCollectionFactory->create()
             ->addFieldToSelect('entity_id')
             ->addFieldToSelect('name');
+
         foreach ($catalogProductCollection as $catalogProduct) {
             $options[] = [
                 'label' => $catalogProduct->getName(),

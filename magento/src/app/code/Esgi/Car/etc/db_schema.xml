@@ -27,4 +27,20 @@
             <column name="content"/>
         </index>
     </table>
+
+    <table name="esgi_car_product" resource="default" engine="innodb" comment="Brand Product Table">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Entity Id"/>
+        <column xsi:type="int" name="brand_id" padding="10" unsigned="true" nullable="false" comment="Brand Id"/>
+        <column xsi:type="int" name="product_id" padding="10" unsigned="true" nullable="false" comment="Product ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="ESGI_CAR_BRAND_PRODUCT_ID_ESGI_CAR_BRAND_ENTITY_ID"
+                    table="esgi_car_product" column="brand_id" referenceTable="esgi_car_brand"
+                    referenceColumn="entity_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="ESGI_CAR_BRAND_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID"
+                    table="esgi_car_product" column="product_id" referenceTable="catalog_product_entity"
+                    referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
 </schema>

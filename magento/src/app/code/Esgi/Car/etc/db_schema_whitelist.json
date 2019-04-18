@@ -1,5 +1,5 @@
 {
-  "esgi_car": {
+  "esgi_car_brand": {
     "column": {
       "entity_id": true,
       "title": true,
@@ -13,6 +13,17 @@
     },
     "constraint": {
       "PRIMARY": true
+    }
+  },
+  "esgi_car_product": {
+    "column": {
+      "entity_id": true,
+      "brand_id": true,
+      "product_id": true
+    },
+    "index": {
+      "ESGI_CAR_BRAND_PRODUCT_ID_ESGI_CAR_BRAND_ENTITY_ID": true,
+      "ESGI_CAR_BRAND_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID": true
     }
   }
 }
