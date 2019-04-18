@@ -2,6 +2,6 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="payment_cart_collect_items_and_amounts">
-        <observer name="BonusFixedFees_FixedFees_payment_collect_total" instance="BonusFixedFees\FixedFees\Observer\AddCustomAmountItem" />
+        <observer name="Esgi_BonusFixedFees_payment_collect_total" instance="BonusFixedFees\FixedFees\Observer\AddCustomAmountItem" />
     </event>
 </config>

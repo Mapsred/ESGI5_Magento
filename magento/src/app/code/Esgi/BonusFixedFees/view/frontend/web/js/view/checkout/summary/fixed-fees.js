@@ -6,17 +6,17 @@ define(
         'Magento_Checkout/js/model/totals',
         'Magento_Catalog/js/price-utils'
     ],
-    function ($,Component,quote,totals,priceUtils) {
+    function ($, Component, quote, totals, priceUtils) {
         "use strict";
         return Component.extend({
             defaults: {
-                template: 'BonusFixedFees_FixedFees/checkout/summary/fixed-fees'
+                template: 'Esgi_BonusFixedFees/checkout/summary/fixed-fees'
             },
             totals: quote.getTotals(),
-               isDisplayedFixedFeesTotal : function () {
-               return true;
+            isDisplayedFixedFeesTotal: function () {
+                return true;
             },
-            getFixedFeesTotal : function () {
+            getFixedFeesTotal: function () {
                 var price = 10;
                 return this.getFormattedPrice(price);
             }

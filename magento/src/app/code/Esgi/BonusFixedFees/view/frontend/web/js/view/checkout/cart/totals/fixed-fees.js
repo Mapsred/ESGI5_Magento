@@ -1,6 +1,6 @@
 define(
     [
-        'BonusFixedFees_FixedFees/js/view/checkout/summary/fixed-fees'
+        'Esgi_BonusFixedFees/js/view/checkout/summary/fixed-fees'
     ],
     function (Component) {
         'use strict';

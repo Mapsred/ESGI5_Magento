@@ -6,7 +6,7 @@ return [
         'Magento_Directory' => 1,
         'Magento_Theme' => 1,
         'Magento_Backend' => 1,
-        'Esgi_BonusFixedFees' => 0,
+        'Esgi_BonusFixedFees' => 1,
         'Esgi_CMSBlock' => 1,
         'Esgi_Car' => 1,
         'Esgi_Helloworld' => 1,

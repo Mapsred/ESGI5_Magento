@@ -13,10 +13,10 @@
                                                 <item name="totals" xsi:type="array">
                                                     <item name="children" xsi:type="array">
                                                         <item name="fixedfees" xsi:type="array">
-                                                            <item name="component" xsi:type="string">BonusFixedFees_FixedFees/js/view/checkout/cart/totals/fixed-fees</item>
+                                                            <item name="component" xsi:type="string">Esgi_BonusFixedFees/js/view/checkout/cart/totals/fixed-fees</item>
                                                             <item name="sortOrder" xsi:type="string">20</item>
                                                             <item name="config" xsi:type="array">
-                                                                <item name="template" xsi:type="string">BonusFixedFees_FixedFees/checkout/cart/totals/fixed-fees</item>
+                                                                <item name="template" xsi:type="string">Esgi_BonusFixedFees/checkout/cart/totals/fixed-fees</item>
                                                                 <item name="title" xsi:type="string" translate="true">Fixed Fees</item>
                                                             </item>
                                                         </item>
