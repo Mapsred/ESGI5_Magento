@@ -1,0 +1,8 @@
+<!-- ko if: isDisplayedFixedFeesTotal() -->
+<tr class="totals coupon-fee excl">
+    <th class="mark" colspan="1" scope="row" data-bind="text: fixedfees"></th>
+    <td class="amount">
+        <span class="price" data-bind="text: getFixedFeesTotal(), attr: {'data-th': fixedfees}"></span>
+    </td>
+</tr>
+<!-- /ko -->
